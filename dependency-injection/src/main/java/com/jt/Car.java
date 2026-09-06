@@ -21,14 +21,14 @@ public class Car {
   // 2. Setter Method Based Injection - R
   // private Engine engine;
   // @Autowired
-  // public void setEngine(Engine engine) {
+  //public void setEngine(Engine engine) {
   // // System.out.println("parameter engine"+ engine);
   // // System.out.println("variable engine"+ this.engine);
   // this.engine = engine;
   // }
 
   // 3. Constructor based injection - HR
-  private Engine engine;
+  private Engine engine; 
 
   @Autowired
   public Car(@Qualifier("dieselEngine") Engine engine) {
