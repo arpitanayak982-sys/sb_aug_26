@@ -30,10 +30,16 @@ public class HelloController {
   public String contact() {
     return "contact-page";
   }
+  //@RequestMapping("/submit-details")
+  // public void submitDetails() {
+   //System.out.println("Submit Details handled");
+   //}
+  
 
-  // @RequestMapping("/submit-details")
-  // public String submitDetails(HttpServletRequest request, Model model) {
-  // System.out.println("Submit Details handled");
+   
+   //@RequestMapping("/submit-details")
+   //public String submitDetails(HttpServletRequest request, Model model) {
+   //System.out.println("Submit Details handled");
 
   // String name = request.getParameter("name");
   // String phone = request.getParameter("phone");
@@ -56,7 +62,7 @@ public class HelloController {
   //   model.addAttribute("phone", phone);
 
   //   return "details-page";
-  // }
+  //}
 
   @RequestMapping(value = "/submit-details", method = RequestMethod.POST)
   public String submitDetails(@ModelAttribute Person person, Model model) {
