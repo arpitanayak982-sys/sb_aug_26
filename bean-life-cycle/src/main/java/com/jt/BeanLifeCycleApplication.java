@@ -12,7 +12,6 @@ public class BeanLifeCycleApplication implements CommandLineRunner {
 		var context = SpringApplication.run(BeanLifeCycleApplication.class, args);
 		System.out.println("Hello");
 		var greet = context.getBean(Greet.class);
-		greet.greet();
 	}
 	@Override
 	public void run(String... args) throws Exception {
