@@ -50,25 +50,26 @@ public class HelloController {
   
   
 
-  
+  @RequestMapping("/submit-details")
+public String submitDetails(HttpServletRequest request, Model model) {
+
+    System.out.println("Submit Details handled");
+
+    String name = request.getParameter("name");
+    String phone = request.getParameter("phone");
+
+    System.out.println("name is: " + name);
+    System.out.println("phone is: " + phone);
+
+    model.addAttribute("name1", name);
+    model.addAttribute("phone", phone);
+
+    return "details-page";
+}
 
 
    
-   @RequestMapping("/submit-details")
-   public String submitDetails(HttpServletRequest request, Model model) {
-   System.out.println("Submit Details handled");
-
-   String name = request.getParameter("name");
-   String phone = request.getParameter("phone");
-
-   System.out.println("name is:- " + name);
-   System.out.println("phone is:- " + phone);
-
-  model.addAttribute("name1", name);
-   model.addAttribute("phone", phone);
-
-   return "details-page";
-   }
+   
 
   // @RequestMapping(value = "/submit-details", method = RequestMethod.POST)
   // public String submitDetails(@RequestParam(value = "name1", 
